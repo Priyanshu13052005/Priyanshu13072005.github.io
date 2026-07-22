@@ -984,6 +984,9 @@ footer {
   .skills-grid {
     grid-template-columns: 1fr;
   }
+  .certificates-grid {
+    grid-template-columns: 1fr;
+  }
 }
 
 /* ─── BACK TO TOP ─── */
@@ -1023,6 +1026,134 @@ footer {
   background: var(--button-hover);
   transform: translateY(-3px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+/* ─── CERTIFICATIONS ─── */
+.certificates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.certificate-card {
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 32px 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 380px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 1px solid rgba(0, 0, 0, 0.03);
+}
+
+.dark-mode .certificate-card {
+  border: 1px solid rgba(255, 255, 255, 0.03);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+}
+
+.certificate-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+}
+
+.dark-mode .certificate-card:hover {
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35);
+}
+
+.cert-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.cert-icon {
+  font-size: 2.2rem;
+  color: var(--accent-color);
+  background: var(--tag-bg);
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s;
+}
+
+.certificate-card:hover .cert-icon {
+  transform: scale(1.1);
+}
+
+.cert-date {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--accent-color);
+  opacity: 0.8;
+}
+
+.cert-body {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 24px;
+}
+
+.cert-body h3 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.cert-issuer {
+  font-size: 0.95rem;
+  font-weight: 600;
+  opacity: 0.85;
+}
+
+.cert-issuer i {
+  color: var(--accent-color);
+  margin-right: 6px;
+}
+
+.cert-desc {
+  font-size: 0.92rem;
+  opacity: 0.75;
+  line-height: 1.6;
+}
+
+.cert-footer {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.06);
+  padding-top: 20px;
+}
+
+.dark-mode .cert-footer {
+  border-top-color: rgba(255, 255, 255, 0.08);
+}
+
+.cert-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.cert-tags .tag-skill {
+  font-size: 0.78rem;
+  padding: 4px 10px;
+  background: var(--chip-bg);
+  color: var(--chip-text);
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.cert-footer .view-case {
+  align-self: flex-start;
+  font-size: 0.95rem;
 }
 
 /* ─── REDUCED MOTION ─── */
